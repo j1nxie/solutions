@@ -4,5 +4,5 @@ including atcoder, cses, codeforces exercises. this repository also hosts my old
 from when i took that to learn basic python.
 
 ## issues (wip exercises that i haven't finished yet)
-[ ] abc109_b
-[ ] abc081_b
+- [ ] abc109_b
+- [ ] abc081_b
