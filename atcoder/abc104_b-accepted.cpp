@@ -4,28 +4,28 @@
 using namespace std;
 
 int main() {
-		string s, ans = "AC";
-		cin >> s;
+    string s, ans = "AC";
+    cin >> s;
 
-		if (s[0] != 'A') {
-				ans = "WA";
-		}
+    if (s[0] != 'A') {
+        ans = "WA";
+    }
 
-		int count = 0;
-		int L = s.size();
-		for (int i = 1; i < L; ++i) {
-				if (isupper(s[i])) {
-						if ((i == 1) || (i == L - 1) || (s[i] != 'C')) {
-								ans = "WA";	
-						}
-						++count;
-				}
-		}
+    int count = 0;
+    int L = s.size();
+    for (int i = 1; i < L; ++i) {
+        if (isupper(s[i])) {
+            if ((i == 1) || (i == L - 1) || (s[i] != 'C')) {
+                ans = "WA";	
+            }
+            ++count;
+        }
+    }
 
-		if (count != 1) {
-				ans = "WA";
-		}
+    if (count != 1) {
+        ans = "WA";
+    }
 
-		cout << ans << "\n";
-		return 0;
+    cout << ans << "\n";
+    return 0;
 }
