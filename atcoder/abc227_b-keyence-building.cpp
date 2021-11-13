@@ -14,16 +14,19 @@ int main() {
     }
 
     for (int i = 0; i < n; i++) {
-        for (int a = 1; a <= 20; a++) {
-            for (int b = 1; b <= a; b++) {
+        int flag = 0;
+        for (int a = 1; a <= 1000; a++) {
+            for (int b = 1; b <= 1000; b++) {
                 if ((4*a*b + 3*a + 3*b) == s[i]) {
-                    ans++;
-                    break;
+                    flag = 1;
                 }
             }
         }
+        if (flag == 0) {
+            ans++;
+        }
     }
 
-    cout << n-ans << "\n";
+    cout << ans << "\n";
     return 0;
 }
