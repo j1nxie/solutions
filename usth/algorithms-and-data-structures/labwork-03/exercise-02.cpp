@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <limits>
 
 const int CAPACITY = 1000;
 
@@ -30,7 +29,7 @@ void push(Stack *st, std::string _val) {
          st->top++;
          st->data[st->top] = _val;
      }
- }
+}
 
 void pop(Stack *st) {
     if (is_empty(*st)) {
@@ -71,32 +70,31 @@ int main() {
         .top = -1,
     };
 
-    { 
-        std::string input;
-        std::cout << "plz initialize undo stack (ctrl-z on windows or ctrl-d on linux to stop): ";
-        while (true) {
-            std::getline(std::cin, input);
+    {
+        int count;
+        std::cout << "numbers of elements in redo initialization: \n";
+        std::cin >> count;
 
-            if (!std::getline(std::cin, input)) {
-                break;
-            } else {
-                push(&_undo, input);
-            }
+        std::cout << "initialize redo: ";
+
+        for (int i = 0; i < count; i++) {
+            std::string value;
+            std::getline(std::cin, value);
+            push(&_redo, value);
         }
     }
 
-    display(&_undo);
+    {
+        int count;
+        std::cout << "numbers of elements in undo initialization: \n";
+        std::cin >> count;
 
-    { 
-        int elements;
-        std::cout << "how many elements do u want to initialize? ";
-        std::cin >> elements;
+        std::cout << "initialize undo: ";
 
-        std::string input;
-        std::cout << "plz initialize redo stack (nothing - escape): ";
-        for (int i = 0; i < elements; i++) {
-            std::getline(std::cin, input);
-            push(&_redo, input);
+        for (int i = 0; i < count; i++) {
+            std::string value;
+            std::getline(std::cin, value);
+            push(&_undo, value);
         }
     }
 
