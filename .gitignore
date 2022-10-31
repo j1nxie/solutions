@@ -4,3 +4,4 @@
 *.pdb
 *.zip
 *.exe.stackdump
+*.class
