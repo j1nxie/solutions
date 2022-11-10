@@ -1,24 +1,25 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 int main() {
-    map<char, int> chars;
+    unordered_map<char, int> chars;
     string s;
     cin >> s;
     bool result = true;
 
-    for (int i = 0; i < s.length(); i++) {
-        if (chars.find(s[i]) != chars.end()) {
-            chars.insert_or_assign(s[i], chars[s[i]]++);
-            cout << s[i] << " " << chars[s[i]];
+    for (auto i : s) {
+        if (chars.find(i) != chars.end()) {
+            chars.insert_or_assign(i, chars[i]++);
         } else {
-            chars.insert_or_assign(s[i], 1);
+            chars.insert({i, 1});
         }
+
+        cout << " " << chars[i];
     }
 
-    for (auto i = chars.begin(); i != chars.end(); i++) {
-        result = result && (i->second % 2 == 0);
+    for (auto i : chars) {
+        result = result && (i.second % 2 == 0);
     }
 
     cout << (result ? "Yes" : "No");
