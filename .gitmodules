@@ -4,3 +4,6 @@
 [submodule "advent-of-code/2016-rs"]
 	path = advent-of-code/2016-rs
 	url = git@github.com:j1nxie/aoc-rs-2016
+[submodule "advent-of-code/2020-rs"]
+	path = advent-of-code/2020-rs
+	url = git@github.com:j1nxie/aoc-rs-2020
