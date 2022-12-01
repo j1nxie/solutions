@@ -7,3 +7,9 @@
 [submodule "advent-of-code/2020-rs"]
 	path = advent-of-code/2020-rs
 	url = git@github.com:j1nxie/aoc-rs-2020
+[submodule "advent-of-code/2022-rs"]
+	path = advent-of-code/2022-rs
+	url = git@github.com:j1nxie/aoc-rs-2022
+[submodule "advent-of-code/2022-gbdk"]
+	path = advent-of-code/2022-gbdk
+	url = git@github.com:j1nxie/aoc-gbdk-2022
