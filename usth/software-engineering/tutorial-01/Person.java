@@ -73,7 +73,7 @@ public class Person {
 	}
 
 	private boolean validateName(String name) {
-		if (name == null || name.length() == 0 || name.length() > 30) {
+		if (name == null || name.length() == 0 || name.length() > 30 || !name.matches("^[a-zA-Z]+(?:\s[a-zA-Z]+)+$")) {
 			return false;
 		}
 
