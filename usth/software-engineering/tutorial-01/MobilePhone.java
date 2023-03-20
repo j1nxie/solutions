@@ -71,6 +71,14 @@ public class MobilePhone {
 		this.guaranteed = guaranteed;
 	}
 
+	public void setColor(char color) throws NotPossibleException {
+		if (!validateColor(color)) {
+			throw new NotPossibleException("invalid color: " + color);
+		}
+
+		this.color = color;
+	}
+
 	private boolean validateManName(String manName) {
 		if (manName == null || manName.length() == 0 || manName.length() > 100) {
 			return false;
