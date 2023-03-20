@@ -96,7 +96,7 @@ public class MobilePhone {
 	}
 
 	private boolean validateModel(String model) {
-		if (model == null || model.length() == 0 || model.length() > 50) {
+		if (model == null || model.length() == 0 || model.length() > 50 || !model.matches("^M-[A-Z]{3}-[0-9]{3}$")) {
 			return false;
 		}
 
