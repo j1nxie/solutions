@@ -11,7 +11,7 @@ public class MobilePhone {
 	@DomainConstraint(type = "String", mutable = false, optional = false, length = 50)
 	private String model;
 
-	@DomainConstraint(type = "char", mutable = false, optional = false)
+	@DomainConstraint(type = "char", mutable = true, optional = false)
 	private char color;
 
 	@DomainConstraint(type = "int", mutable = false, optional = false)
