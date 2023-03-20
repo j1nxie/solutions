@@ -5,14 +5,22 @@ import utils.NotPossibleException;
 import utils.OptType;
 
 public class MobilePhone {
+	enum Color {
+		Red,
+		Orange,
+		Yellow,
+		Blue,
+		Purple,
+	}
+
 	@DomainConstraint(type = "String", mutable = false, optional = false, length = 100)
 	private String manName;
 
 	@DomainConstraint(type = "String", mutable = false, optional = false, length = 50)
 	private String model;
 
-	@DomainConstraint(type = "char", mutable = true, optional = false)
-	private char color;
+	@DomainConstraint(type = "Color", mutable = true, optional = false)
+	private Color color;
 
 	@DomainConstraint(type = "int", mutable = false, optional = false)
 	private int year;
@@ -96,8 +104,7 @@ public class MobilePhone {
 	}
 
 	private boolean validateColor(char color) {
-		char[] validcolors = { 'R', 'O', 'Y', 'G', 'B', 'P' };
-		for (char vc : validcolors) {
+		for (char vc : Color.values()) {
 			if (color == vc) {
 				return true;
 			}
