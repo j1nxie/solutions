@@ -13,3 +13,6 @@
 [submodule "advent-of-code/2022-gbdk"]
 	path = advent-of-code/2022-gbdk
 	url = git@github.com:j1nxie/aoc-gbdk-2022
+[submodule "usth/software-engineering"]
+	path = usth/software-engineering
+	url = git@github.com:j1nxie/software-engineering
